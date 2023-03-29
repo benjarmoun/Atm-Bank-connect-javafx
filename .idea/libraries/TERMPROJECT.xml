@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="TERMPROJECT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TERMPROJECT_jar/TERMPROJECT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -103,9 +103,6 @@ public class UserPageController extends UserLoginController {
     public void makeTransferButton(ActionEvent event) throws IOException {
 
         double save = Double.parseDouble(trnasamount.getText());
-//        double balance = Customer.getBalance();
-//        System.out.println(cardIDTextField.getText());
-//        System.out.println(balance);
 
         String json = "{\"accountNumber\": " + receiverid.getText() + ", \"amount\": \"" + trnasamount.getText() + "\"}";
         System.out.println(receiverid.getText() + " "+trnasamount.getText());
@@ -136,50 +133,6 @@ public class UserPageController extends UserLoginController {
         }
 
 
-
-
-//        AdminAccess object=new AdminAccess();
-//        User objectuser=new User();
-//        object.sendIdToFile(receiverid.getText());
-//        if (receiverid.getText().isEmpty()||trnasamount.getText().isEmpty()){
-//            transferinfo.setText("");
-//            transferconf.setText("Please Enter A Valid Information");
-//            return;
-//        }if (!trnasamount.getText().matches("[0.0-9]+")){
-//            transferinfo.setText("");
-//            transferconf.setText("Please Enter A Valid Information");
-//            return;
-//        }if (trnasamount.getText().contains(" ")||receiverid.getText().contains(" ")) {
-//            transferinfo.setText("");
-//            transferconf.setText("Please Enter A Valid Information");
-//            return;
-//        }
-//        if ((trnasamount.getText().length() >=7)){
-//            transferinfo.setText("");
-//            transferconf.setText("Cant Transfer This Amount");
-//            return;
-//        }if (trnasamount.getText().matches("[0.0-0]+")){
-//            transferinfo.setText("");
-//            transferconf.setText("Cant Transfer This Amount");
-//            return;
-//        }
-//        objectuser.transferCash(trnasamount.getText());
-//        if (!objectuser.idnotequlcheck){
-//            objectuser.withdrawCash(trnasamount.getText());
-//           if (objectuser.insufficientwithdraw){
-//                transferinfo.setText("");
-//                transferconf.setText("Not Enough Balance To Transfer!!\nPlease Try Again With Enough Money");
-//                return;
-//            }
-//            transferconf.setText("");
-//            transferinfo.setText("Transfer Successful\nYou Have Transferd "+trnasamount.getText()+"$");
-//
-//        }
-//
-//        else {
-//            transferinfo.setText("");
-//            transferconf.setText("Invalid User Id ");
-//        }
     }
     @FXML
     public void makeInfoButton(ActionEvent event) throws FileNotFoundException {
@@ -193,10 +146,6 @@ public class UserPageController extends UserLoginController {
     public void makeDepositButton(ActionEvent event) throws IOException {
 
         double save = Double.parseDouble(trnasamount.getText());
-//        double balance = Customer.getBalance();
-//        System.out.println(cardIDTextField.getText());
-//        System.out.println(balance);
-
         String json = "{\"amount\": \"" + trnasamount.getText() + "\"}";
         System.out.println(" "+trnasamount.getText());
         try {
@@ -225,32 +174,6 @@ public class UserPageController extends UserLoginController {
             System.out.println("Error");
         }
 
-
-
-//
-//
-//        User object=new User();
-//    if (depositamount.getText().isEmpty()){
-//        depositinfo.setText("Please Enter A Valid Amount");
-//        return;
-//    }
-//        if (!depositamount.getText().matches("[0.0-9]+")){
-//            depositinfo.setText("Please Enter A Valid Amount");
-//            return;
-//        }
-//        if ((depositamount.getText().length() >=7)){
-//            depositinfo.setText("Cant Deposit This Amount");
-//            return;
-//        }if (depositamount.getText().matches("[0.0-0]+"))
-//        {
-//            depositinfo.setText("Cant Deposit This Amount");
-//            return;
-//        }
-//        if (depositamount.getText().contains(" ")){
-//            depositinfo.setText("Please Enter A Valid Amount");
-//            return;
-//        }
-//    object.depositCash(depositamount.getText());
     depositinfo.setText("You Have Deposited "+depositamount.getText()+"$");
     }
     @FXML
@@ -287,39 +210,6 @@ public class UserPageController extends UserLoginController {
             System.out.println("Error");
         }
 
-
-
-//        User object=new User();
-//        if (withdrawamount.getText().isEmpty()){
-//            withdrawinfo.setText("Please Enter A Valid Amount!");
-//            return;
-//        }
-//        if (!withdrawamount.getText().matches("[0.0-9]+")) {  //this so the user can enter only numbers
-//            withdrawinfo.setText("Please Enter A Valid Amount!");
-//            return;
-//        }
-//        if ((withdrawamount.getText().length() >=7)){
-//            withdrawinfo.setText("Please Enter A Valid Amount");
-//            return;
-//        }if (withdrawamount.getText().matches("[0.0-0]+"))
-//        {
-//            withdrawinfo.setText("Cant Deposit This Amount");
-//            return;
-//        }
-//        if (withdrawamount.getText().contains(" "))
-//        {
-//            withdrawinfo.setText("Cant Deposit This Amount");
-//            return;
-//        }
-//
-//        object.withdrawCash(withdrawamount.getText());
-//
-//    if (object.insufficientwithdraw){
-//        withdrawinfo.setText("Not Enough Balance To Withdraw!!\nPlease Try Again With Enough Money");
-//     }
-//    else {
-//        withdrawinfo.setText("Withdraw Successful"+"\nYou Have Withdrawn:"+withdrawamount.getText()+"$");
-//     }
     }
     @FXML
     void makeCheckBalButton(MouseEvent event) throws IOException {
